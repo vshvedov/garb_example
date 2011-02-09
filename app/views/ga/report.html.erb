@@ -1,0 +1,63 @@
+<fieldset>
+  <legend>Choose a profile & date range</legend>
+  <% form_tag :controller => "ga", :action => "report" do %>
+    <div>
+      <%= label :profile, :select %>:<br />
+      <%= select :profile, :profile_id, @profiles.collect {|k, v| [v, k]},  {:include_blank => true, :selected => @stuff[:profile_id]} %>
+    </div>
+
+    <div class="block_1">
+      <div class="floater">
+      <%= label :profile, :start_date %>:<br />
+        <%= date_select :profile, :start_date, {:default => @start_date} %>
+      </div>
+      <div class="floater">
+      <%= label :profile, :end_date %>:<br />
+        <%= date_select :profile, :end_date , {:default => @end_date }  %>
+      </div>
+     </div>
+  
+     <div class="block_2">
+	
+		<div class="floater">
+	    	<%= label :profile, :dimensions %>:<br />
+	        <%= select(:profile, :dimensions, grouped_options_for_select(dimensions_list, @stuff[:dimensions]), {},{:multiple => true, :size => 10}) %>
+	   </div>
+	
+      <div class="floater">
+        <%= label :profile, :metrics %>:<br />       
+        <%= select(:profile, :metrics, grouped_options_for_select(metrics_list, @stuff[:metrics]), {},{:multiple => true, :size => 10}) %>
+      </div>
+      
+      
+
+      <div class="floater">
+        <%= label :profile, :limit %>:<br />
+           <%= select :profile, :limit, %w[10 25 50 100 500 1000], { :index => nil, :selected => @stuff[:limit]} %>
+      </div>
+
+      <div class="floater">
+        <%= label :profile, :offset %>:<br />
+          <%= select :profile, :offset, %w[1 10 25 50 100 500 1000], { :index => nil, :selected => @stuff[:offset]} %>
+      </div>
+
+       <div class="floater">
+        <%= label :profile, :sort %>:<br />
+          <%= select :profile, :sort, %w[asc desc], { :index => nil, :selected => @stuff[:sort]} %>
+      </div>
+
+       <div class="floater">
+        <%= submit_tag "Submit" %>
+       </div>
+
+     </div>
+     
+  <% end %>
+</fieldset>
+<div>
+  <% if @results %>
+    <% for result in @results %>
+      <%= h(result)  %><br />
+    <% end  %>
+  <% end  %>
+</div>

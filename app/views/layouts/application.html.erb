@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>GA <%= ": #{@title} " if @title %></title>
+  <%= stylesheet_link_tag "styles", :media => "screen" %>
+</head>
+
+<body class="<%= controller.controller_name %>">
+<div id="wrapper">
+  <div id="nav">
+    <ul>
+      <!-- START:links -->
+      <li id="nav_home">
+      </li> 
+    </ul>
+  </div>
+
+  <div id="content">
+    <%= yield :layout %>
+  </div>
+
+  <div id="footer">&nbsp;</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* =MAIN
+------------------------------------- */
+body, td, input, select, textarea, a {
+  font-size:  100%;
+  font-family: arial, helvetica, verdana, sans-serif;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, input, p, blockquote, th, td {
+  margin: 0;
+  padding:0;
+}
+fieldset {
+    padding: 10px;
+}
+
+body {
+  color: #333;
+  background-color: #7C9D51;
+}
+img {
+  border-width: 0;
+}
+a:link {
+  color: #060;
+}
+a:visited {
+  color: #093;
+}
+a:hover {
+  color: #fff;
+  background-color: #060;
+}
+p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 12px 0;
+}
+h1 {
+  font-size: 24px;
+  line-height: 48px;
+  margin: 12px 0 0 0;
+}
+h2 {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 8px 0 4px 0;
+}
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 12px 0 0 0;
+}
+
+
+/* =FLOATS
+------------------------------------- */
+/* clear floats */
+.clear:after,
+#nav:after,
+.highlight:after,
+#new_presentation div:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clear,
+#nav,
+.highlight,
+#new_presentation div {
+  display: inline-block;
+}
+
+/* =LAYOUT
+------------------------------------- */
+#wrapper {
+  width: 782px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+#content {
+  padding: 1px 14px;
+  border-left: 1px solid #DAD1B4;
+  border-right: 1px solid #DAD1B4;
+}
+#content dl {
+  margin-bottom: 18px;
+}
+
+/* =HEADER
+------------------------------------- */
+#logo {
+  background-color: #7C9D51;
+  text-align: center;
+}
+#nav {
+  display: block;
+  background-color: #F8F5EE;
+  border-left: 1px solid #DAD1B4;
+  border-right: 1px solid #DAD1B4;
+  border-bottom: 1px solid #ECE6D2;
+}
+#nav ul {
+  float: left;
+  list-style-type: none;
+  margin-left: 5px;
+}
+#nav li {
+  float: left;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+#nav li a {
+  float: left;
+  display: block;
+  padding: 4px 12px;
+  text-decoration: none;
+}
+#nav div {
+  float: right;
+  padding: 10px;
+  margin-right: 5px;
+  text-align: right;
+  font-style: italic;
+  font-size: 13px;
+}
+#nav div a {
+  padding: 3px 0;
+}
+
+/* highlight tabs */
+.homepage      #nav_home a,
+.meetings      #nav_meetings a,
+.presentations #nav_meetings a,
+.users         #nav_users a,
+.photos        #nav_photos a,
+#nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* =FOOTER
+------------------------------------- */
+#footer {
+  background-color: #F8F5EE;
+  border: 1px solid #DAD1B4;
+  border-top-color: #ECE6D2;
+}
+
+/* =FLASH and ERRORS
+------------------------------------- */
+#spinner {
+  vertical-align: middle;
+  margin-left: 6px;
+}
+#flash_notice {
+  color: #090;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  background-color: #F8F5EE;
+}
+.errorExplanation {
+  padding: 5px 10px;
+  background-color: #F8F5EE;
+}
+.errorExplanation h2 {
+  color: #C00;
+  font-size: 16px;
+}
+.errorExplanation p {
+  margin-bottom: 6px;
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+}
+.errorExplanation ul {
+  margin: 0 20px;
+  font-size: 14px;
+}
+.fieldWithErrors {
+  display: inline;
+}
+
+/* =BOXES
+------------------------------------- */
+.form fieldset,
+.details,
+.meeting_list,
+.highlight {
+  margin: 0 0 12px 0;
+  border: 1px solid #ECE6D2;
+  padding: 10px;
+  background-color: #FCFBF7;
+  line-height: 24px;
+}
+.floater {
+    float:left;
+    padding: 10px;
+}
+
+.block_1 {
+    width: 600px;
+    height: 60px;
+}
+
+.block_2 {
+    width: 700px;
+    height: 250px;
+}
+
+
+
+
+
+
